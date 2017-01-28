@@ -1,3 +1,0 @@
-* List
-
-This is a generic list in C.
