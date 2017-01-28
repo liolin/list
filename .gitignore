@@ -1,3 +1,8 @@
+# Compiled directorys
+obj/*
+bin/*
+release/*
+
 # Compiled source
 *.o
 *.dylib
