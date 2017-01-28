@@ -8,10 +8,13 @@ BIN = ../bin
 RELEASE = ../release
 
 
-list: main.o buildOsx
-	$(C) $(CFLAGS) -L$(RELEASE) -lList -o $(BIN)/list $(OBJ)/main.o
+list: main.o list.o
+	$(C) $(CFLAGS) -o $(BIN)/list $(OBJ)/main.o $(OBJ)/list.o
 
 main.o: main.c
+	$(C) $(CFLAGS) -c $< -o $(OBJ)/$@
+
+list.o: list.c list.h
 	$(C) $(CFLAGS) -c $< -o $(OBJ)/$@
 
 buildOsx: list.c list.h
@@ -20,10 +23,6 @@ buildOsx: list.c list.h
 
 build: list.c list.h
 	$(C) $(BUILDFLAGS) -o $(RELEASE)/libList.so $<
-
-
-list.o: list.c list.h
-	$(C) $(CFLAGS) -c $< -o $(OBJ)/$@
 
 
 

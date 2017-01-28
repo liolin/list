@@ -7,6 +7,7 @@
 
 /* function pointers */
 typedef void (*fn)(void*);
+typedef void (*compare)(void*, void*);
 
 /* struct */
 typedef struct listNode ListNode_t;
@@ -28,9 +29,12 @@ struct list
 
 /* public functions */
 List_t* List_init(size_t elementSize, fn free);
+void List_free(List_t *pList);
 int List_append(List_t *pList, void * data);
 void* List_at(List_t *pList, size_t index);
 int List_delete(List_t *pList, size_t index);
+int List_equal(List_t *pA, List_t *pB);
+void List_sort(List_t *pList);
 
 /* debug function */
 void List_showList(List_t *pList, fn func);

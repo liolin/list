@@ -1,3 +1,8 @@
+/*
+  Author: Olivier Lischer (liolin)
+  E-Mail: liolindeb@gmail.com
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
@@ -63,6 +68,7 @@ void addressListExample()
   printf("Entferne viertes Objekt\n");
   List_delete(pList, 3);
   List_showList(pList, addressShow);
+  List_free(pList);
 }
 
 

@@ -14,6 +14,14 @@ List_t* List_init(size_t elementSize, fn free)
   return pList;
 }
 
+void List_free(List_t *pList)
+{
+  while(pList->Length > 0)
+    List_delete(pList, 0);
+  free(pList);
+  pList = 0;
+}
+
 int List_append(List_t *pList, void *data)
 {
   if(pList == NULL)
@@ -72,6 +80,13 @@ int List_delete(List_t *pList, size_t index)
     tmp = tmp->pNext;
     pList->__free(pLeft->data);
     free(pLeft);
+
+    if(pList->pNext == 0)
+    {
+      pList->Length = 0;
+      return 0;
+    }
+    
     pList->pNext = tmp;
     pList->Length--;
     return 0;
@@ -95,6 +110,12 @@ int List_delete(List_t *pList, size_t index)
 
   return -1;  
 }
+
+int List_equal(List_t *pA, List_t *pB)
+{
+  return pA == pB ? 1 : 0;
+}
+
 
 
 void List_showList(List_t *pList, fn func)
