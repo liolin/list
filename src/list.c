@@ -2,9 +2,11 @@
   Author: Olivier Lischer (liolin)
   E-Mail: liolindeb@gmail.com
 
-  Last change: 2017-01-28
-
   Filename: list.c
+  Desc: The definition of the List_t and
+        the helper structs
+
+  Last change: 2017-01-28
 */
 
 

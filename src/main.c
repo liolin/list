@@ -2,9 +2,10 @@
   Author: Olivier Lischer (liolin)
   E-Mail: liolindeb@gmail.com
 
-  Last change: 2017-01-28
-
   Filename: main.c
+  Desc: Testing my list struct
+
+  Last change: 2017-01-28
 */
 
 #include <stdio.h>

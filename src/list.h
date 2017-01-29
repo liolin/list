@@ -2,11 +2,11 @@
   Author: Olivier Lischer (liolin)
   E-Mail: liolindeb@gmail.com
 
+  Filename: main.c
+  Desc: Implementing of the List_t / list.h
+
   Last change: 2017-01-28
-
-  Filename: list.h
 */
-
 
 #ifndef LIST_H
 #define LIST_H
