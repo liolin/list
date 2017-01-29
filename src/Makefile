@@ -8,8 +8,8 @@ BIN = ../bin
 RELEASE = ../release
 
 
-list: main.o list.o
-	$(C) $(CFLAGS) -o $(BIN)/list $(OBJ)/main.o $(OBJ)/list.o
+list.out: main.o list.o
+	$(C) $(CFLAGS) -o $(BIN)/list.out $(OBJ)/main.o $(OBJ)/list.o
 
 main.o: main.c
 	$(C) $(CFLAGS) -c $< -o $(OBJ)/$@

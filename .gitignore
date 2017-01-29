@@ -1,6 +1,7 @@
 # Compiled source
 *.o
 *.dylib
+*.out
 
 # OS generated files
 .DS_Store
