@@ -68,7 +68,15 @@ void* List_at(List_t *pList, size_t index)
 
   ListNode_t *tmp = pList->pNext;
   size_t i = 0;
-  while(tmp->pNext != NULL)
+
+  if(pList->pNext == 0)
+    return NULL;
+  
+  if(index == 0)
+    return tmp->data;
+    
+
+  while(tmp != NULL)
   {
     if(i == index)
       return tmp->data;

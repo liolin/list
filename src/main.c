@@ -64,13 +64,17 @@ void addressListExample()
   c.name = "Burger";
   c.vname = "Simon";
   List_append(pList, &c);
-  List_showList(pList, addressShow);
+  //List_showList(pList, addressShow);
 
   List_sort(pList, addressCompare);
 
   printf("\n\n");
+
+
+  Address_t *b = List_at(pList, 1);
+  printf("%s\n", b->name);
   
-  List_showList(pList, addressShow);
+  //List_showList(pList, addressShow);
   List_free(pList);
 }
 
